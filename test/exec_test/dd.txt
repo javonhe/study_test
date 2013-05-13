@@ -1,0 +1,5 @@
+i am a process image!
+my pid = 7886, parentpid = 7885
+my uid = 1000, gid = 1000
+argv[0]:./p2
+argv[1]:p1
