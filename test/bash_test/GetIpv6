@@ -1,0 +1,11 @@
+#!/system/bin/sh
+for i in 1 2 3 4
+do
+prop=`busybox ifconfig eth0 | busybox grep inet6 | busybox sed -n '/Global/'p | busybox sed -n ${i}p | busybox awk ' ''{print $3}'`
+echo $prop
+if [ -n "$prop" ]
+then
+setprop mstar.net.ipv6.address${i} $prop
+fi
+done
+

@@ -1,0 +1,3 @@
+#!/system/bin/sh
+var=`busybox sed -n 1p /data/misc/dhcp/dnsmasq.leases | busybox awk ' ''{print $3}'`
+setprop dhcp.offer.ip $var

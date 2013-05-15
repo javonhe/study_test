@@ -1,0 +1,7 @@
+1.GetdnsmaspIp
+从/data/misc/dhcp/dnsmasq.leases文件中，读取第一行，并取出以空格为分割符的第三个字符串
+最后设置到prepoty中
+
+
+2.GetIpv6
+提取ifconfig eth0的输出中，具有inet6和Global字段的字符串，并以此字符串为基础取出以空格为分割符的第三个字符串
